@@ -130,7 +130,7 @@ export default function HomePage() {
     },
   ]
 
-  const whatsappNumber = "00962799033406"
+  const whatsappNumber = "+962799033406"
   const whatsappLink = `https://wa.me/${whatsappNumber}`
 
   const stats = [
