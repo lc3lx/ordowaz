@@ -182,9 +182,7 @@ ${formData.message}`)
             <h3 className="text-4xl md:text-5xl font-bold text-white mb-6">أرسل لنا رسالة</h3>
             <p className="text-xl text-blue-100 mb-4">تواصل معنا وسنقوم بالرد عليك في أقرب وقت ممكن</p>
             <div className="bg-green-100 border border-green-300 rounded-lg p-3 mb-6">
-              <p className="text-green-800 text-sm font-medium">
-                ⚡ <strong>الإرسال الفوري مُفعل!</strong> ستصل رسالتك إلى ordowazordoo@gmail.com خلال ثوانٍ
-              </p>
+            
             </div>
           </div>
 
