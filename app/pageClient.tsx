@@ -156,12 +156,7 @@ const ContactForm = () => {
             <p className="text-xl text-blue-100 mb-4">
               سيتم إرسال رسالتك مباشرة إلى ordowazordoo@gmail.com
             </p>
-            <div className="bg-green-100 border border-green-300 rounded-lg p-3 mb-6">
-              <p className="text-green-800 text-sm font-medium">
-                ⚡ <strong>الإرسال الفوري مُفعل!</strong> ستصل رسالتك إلى
-                ordowazordoo@gmail.com خلال ثوانٍ
-              </p>
-            </div>
+            <div className="bg-green-100 border border-green-300 rounded-lg p-3 mb-6"></div>
           </div>
 
           <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-2xl animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-300">
@@ -295,7 +290,7 @@ const ContactForm = () => {
                       <span>جاري الإرسال إلى ordowazordoo@gmail.com...</span>
                     </div>
                   ) : (
-                    "إرسل رسالة فوراً إلى ordowazordoo@gmail.com"
+                    "تواصل معنا الان "
                   )}
                 </Button>
 
@@ -595,26 +590,26 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
             {services.map((service, index) => (
               <Card
                 key={index}
                 className="group hover:shadow-2xl transition-all duration-500 transform hover:scale-105 border-0 shadow-lg bg-gradient-to-br from-white to-slate-50/50 overflow-hidden"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <CardHeader className="pb-4">
+                <CardHeader className="pb-4 p-6">
                   <div className="flex items-start space-x-4 space-x-reverse">
-                    <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-3 rounded-xl text-white group-hover:scale-110 transition-transform duration-300">
-                      {service.icon}
+                    <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-3 rounded-xl text-white group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                      <div className="h-8 w-8">{service.icon}</div>
                     </div>
-                    <div className="flex-1">
+                    <div className="flex-1 min-w-0">
                       <CardTitle className="text-lg leading-tight text-slate-800 group-hover:text-blue-800 transition-colors duration-300">
                         {service.title}
                       </CardTitle>
                     </div>
                   </div>
                 </CardHeader>
-                <CardContent className="space-y-4">
+                <CardContent className="space-y-4 p-6 pt-0">
                   <CardDescription className="text-slate-600 leading-relaxed">
                     {service.description}
                   </CardDescription>
@@ -623,7 +618,7 @@ export default function HomePage() {
                     {service.features.map((feature, featureIndex) => (
                       <div
                         key={featureIndex}
-                        className="flex items-center space-x-2 space-x-reverse text-sm"
+                        className="flex items-center space-x-2 space-x-reverse"
                       >
                         <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0" />
                         <span className="text-slate-600">{feature}</span>
@@ -660,10 +655,10 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
             {[
               {
-                icon: <Award className="h-12 w-12" />,
+                icon: <Award className="h-10 w-10 md:h-12 md:w-12" />,
                 title: "جودة عالية",
                 description:
                   "نلتزم بأعلى معايير الجودة العالمية في جميع خدماتنا البحثية والأكاديمية",
@@ -671,7 +666,7 @@ export default function HomePage() {
                 bgColor: "from-blue-50 to-blue-100",
               },
               {
-                icon: <Users className="h-12 w-12" />,
+                icon: <Users className="h-10 w-10 md:h-12 md:w-12" />,
                 title: "فريق متخصص",
                 description:
                   "فريق من الخبراء والأكاديميين المتخصصين في مختلف المجالات العلمية",
@@ -679,7 +674,7 @@ export default function HomePage() {
                 bgColor: "from-green-50 to-green-100",
               },
               {
-                icon: <Shield className="h-12 w-12" />,
+                icon: <Shield className="h-10 w-10 md:h-12 md:w-12" />,
                 title: "سرية تامة",
                 description:
                   "نضمن الحفاظ على سرية وخصوصية جميع أعمالكم وبياناتكم البحثية",
@@ -687,7 +682,7 @@ export default function HomePage() {
                 bgColor: "from-purple-50 to-purple-100",
               },
               {
-                icon: <MessageCircle className="h-12 w-12" />,
+                icon: <MessageCircle className="h-10 w-10 md:h-12 md:w-12" />,
                 title: "دعم مستمر",
                 description:
                   "متاحون للتواصل والدعم الفني على مدار الساعة طوال أيام الأسبوع",
@@ -695,7 +690,7 @@ export default function HomePage() {
                 bgColor: "from-orange-50 to-orange-100",
               },
               {
-                icon: <Globe className="h-12 w-12" />,
+                icon: <Globe className="h-10 w-10 md:h-12 md:w-12" />,
                 title: "تقنيات متقدمة",
                 description:
                   "أردواز - نستخدم أحدث التقنيات في تصميم المواقع، تطبيقات الجوال، والذكاء الاصطناعي لخدمة البحث العلمي",
@@ -709,7 +704,7 @@ export default function HomePage() {
                 style={{ animationDelay: `${index * 150}ms` }}
               >
                 <div
-                  className={`bg-gradient-to-br ${item.bgColor} w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                  className={`bg-gradient-to-br ${item.bgColor} w-20 h-20 md:w-24 md:h-24 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
                 >
                   <div
                     className={`bg-gradient-to-r ${item.color} bg-clip-text text-transparent`}
@@ -717,7 +712,7 @@ export default function HomePage() {
                     {item.icon}
                   </div>
                 </div>
-                <h4 className="text-2xl font-bold mb-4 text-slate-800 group-hover:text-blue-800 transition-colors duration-300">
+                <h4 className="text-xl md:text-2xl font-bold mb-4 text-slate-800 group-hover:text-blue-800 transition-colors duration-300">
                   {item.title}
                 </h4>
                 <p className="text-slate-600 leading-relaxed">
